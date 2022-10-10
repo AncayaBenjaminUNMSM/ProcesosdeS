@@ -2,4 +2,3 @@
 <h4 align="center">
 :construction: Proyecto en construcción :construction:
 </h4>
-![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
