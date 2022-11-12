@@ -23,6 +23,9 @@ public class Administrador {
         return nombre;
     }
 
+    public void mostrarPedidos(RealizarPedido p){
+        System.out.println(p);
+    }
     
     
   
