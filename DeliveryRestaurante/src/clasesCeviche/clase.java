@@ -12,6 +12,6 @@ package clasesCeviche;
 public class clase {
     
     public void Nueva(){
-        System.out.println("Nueva clase");
+        ;
     }
 }
