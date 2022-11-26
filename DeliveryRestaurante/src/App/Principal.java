@@ -1,6 +1,8 @@
 package App;
 
 import clasesCeviche.Administrador;
+import clasesCeviche.ArregloPlatos;
+import clasesCeviche.Plato;
 import clasesCeviche.Producto;
 
 import controlador.*;
@@ -20,8 +22,12 @@ public class Principal {
         ControladorMenuprincipal cmenuprincip = new ControladorMenuprincipal(admi, vmprincip);
         cmenuprincip.iniciar();
         
-                
-
+        
+        ArregloPlatos platos = new ArregloPlatos(2);
+        platos.agregar(new Plato(1.0,"A"));
+        platos.agregar(new Plato(1.0,"B"));
+        platos.agregar(new Plato(1.0,"C"));
+        System.out.println(platos);
  
     }
     
