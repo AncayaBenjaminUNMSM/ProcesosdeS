@@ -29,10 +29,10 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        modificar = new javax.swing.JButton();
+        realizar = new javax.swing.JButton();
+        ver = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -44,19 +44,29 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton1.setText("MODIFICAR CARTA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        modificar.setText("MODIFICAR CARTA");
+        modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                modificarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("REALIZAR PEDIDO");
+        realizar.setText("REALIZAR PEDIDO");
+        realizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                realizarActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("VER PEDIDO DEL CLIENTE");
+        ver.setText("VER PEDIDO DEL CLIENTE");
+        ver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("SALIR");
-        jButton4.setToolTipText("");
+        salir.setText("SALIR");
+        salir.setToolTipText("");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -65,26 +75,26 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ver)
+                    .addComponent(realizar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
-                .addComponent(jButton4)
+                .addComponent(salir)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(92, 92, 92)
-                .addComponent(jButton1)
+                .addComponent(modificar)
                 .addGap(113, 113, 113)
-                .addComponent(jButton2)
+                .addComponent(realizar)
                 .addGap(112, 112, 112)
-                .addComponent(jButton3)
+                .addComponent(ver)
                 .addGap(105, 105, 105)
-                .addComponent(jButton4)
+                .addComponent(salir)
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
@@ -114,9 +124,20 @@ public class Inicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
+        
+        
+    }//GEN-LAST:event_modificarActionPerformed
+
+    private void verActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verActionPerformed
+        
+        
+    }//GEN-LAST:event_verActionPerformed
+
+    private void realizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_realizarActionPerformed
+        
+        
+    }//GEN-LAST:event_realizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,14 +175,14 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    public javax.swing.JButton modificar;
+    public javax.swing.JButton realizar;
+    public javax.swing.JButton salir;
+    public javax.swing.JButton ver;
     // End of variables declaration//GEN-END:variables
 }
