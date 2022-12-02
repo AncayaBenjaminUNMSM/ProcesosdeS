@@ -6,6 +6,7 @@
 package controlador;
 
 import com.Inicio.Inicio;
+import iterativo.Mod;
 import java.awt.event.ActionEvent;
 
 /**
@@ -22,6 +23,13 @@ public class ControladorInicio {
         Ver verpedido = new Ver();   
         verpedido.setVisible(true);
         });
+        
+        vista.modificar.addActionListener((ActionEvent ae) -> {
+        Mod modificar = new Mod();   
+        modificar.setVisible(true);
+        });
+        
+        
     }
     
     public void iniciar(){
