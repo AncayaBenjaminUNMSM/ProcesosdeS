@@ -5,8 +5,10 @@
  */
 package controlador;
 
+import clasesCeviche.PedidoArreglo;
+import clasesCeviche.ProductoArreglo;
 import com.Inicio.Inicio;
-import iterativo.Mod;
+import iterativo.Modificar;
 import java.awt.event.ActionEvent;
 
 /**
@@ -14,26 +16,41 @@ import java.awt.event.ActionEvent;
  * @author user
  */
 public class ControladorInicio {
-    public Inicio vista;
+    public Inicio vistaInicio;
+    public ProductoArreglo modeloProductos;
+    public PedidoArreglo modeloPedidos;    
+    
+    //public RealizarPedido vistaRealizarPerdido
 
-    public ControladorInicio() {
-        this.vista = new Inicio();
+    public ControladorInicio(ProductoArreglo modeloProductos, PedidoArreglo modeloPedidos) {
+        this.vistaInicio = new Inicio();
+        this.modeloPedidos = modeloPedidos;
+        this.modeloProductos = modeloProductos;
         
-        vista.ver.addActionListener((ActionEvent ae) -> {
-        Ver verpedido = new Ver();   
-        verpedido.setVisible(true);
+        vistaInicio.ver.addActionListener((ActionEvent ae) -> {
+            ControladorVer controladorVer = new ControladorVer(modeloProductos, modeloPedidos);
+            controladorVer.iniciar();
+            vistaInicio.dispose();
         });
         
-        vista.modificar.addActionListener((ActionEvent ae) -> {
-        Mod modificar = new Mod();   
-        modificar.setVisible(true);
+        vistaInicio.modificar.addActionListener((ActionEvent ae) -> {
+            ControladorMod controladorMod = new ControladorMod(modeloProductos, modeloPedidos);
+            controladorMod.iniciar();
+            vistaInicio.dispose();            
         });
+        
+        vistaInicio.realizar.addActionListener((ActionEvent ae) -> {
+            ControladorCarta controladorCarta = new ControladorCarta(modeloProductos, modeloPedidos);
+            controladorCarta.iniciar();
+            vistaInicio.dispose();            
+        });
+
         
         
     }
     
     public void iniciar(){
-        this.vista.setVisible(true);
+        this.vistaInicio.setVisible(true);
     }
     
     

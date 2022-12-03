@@ -2,47 +2,49 @@ package controlador;
 
 import App.*;
 import clasesCeviche.Administrador;
+import clasesCeviche.PedidoArreglo;
+import clasesCeviche.ProductoArreglo;
+import com.Inicio.Inicio;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  *
  * @author hp
  */
 public class ControladorLogin {
-    private Administrador admin;
-    private LoginGeneral vista;
-    private FormMenuPrincipal vmprincip;
+    public Administrador admin;
+    public LoginGeneral vistaLogin;
+    public ProductoArreglo modeloProductos;
+    public PedidoArreglo modeloPedidos;
+
     //private PrincipalMenu vistamenu;
     //ControladorMenuPrincipal menuprincip;
 
-    public ControladorLogin(Administrador admin, FormMenuPrincipal form) {
+    public ControladorLogin(Administrador admin, ProductoArreglo modeloProductos, 
+            PedidoArreglo modeloPedidos) {
         this.admin = admin;
-        this.vista = new LoginGeneral();
-        this.vmprincip = form;
-        this.vista.jButtonLogin.addActionListener( new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e){
-            String userIn = vista.jTextLoginUsuario.getText();
+        this.vistaLogin = new LoginGeneral();
+        this.modeloPedidos = modeloPedidos;
+        this.modeloProductos = modeloProductos;
+        
+        this.vistaLogin.jButtonLogin.addActionListener((ActionEvent e) -> {
+            String userIn = vistaLogin.jTextLoginUsuario.getText();
             String userSave = admin.getNombre();
             
-            String userPssIn = String.valueOf(vista.jPasswordFieldLogin.getPassword());
+            String userPssIn = String.valueOf(vistaLogin.jPasswordFieldLogin.getPassword());
             String userPss = admin.getCodigo();
             
             if(userIn.equals(userSave) && userPssIn.equals(userPss) ){
-                 vmprincip.setVisible(true);
-                 vista.dispose();
+                ControladorInicio controladorInicio = new ControladorInicio(modeloProductos, modeloPedidos);
+                controladorInicio.iniciar();
+                vistaLogin.dispose();
             }
-
-        }
-        }
-        
-        ); 
+        }); 
     }
     
 
     public void iniciar(){
-        vista.setVisible(true);
+        vistaLogin.setVisible(true);
     }
   
 }

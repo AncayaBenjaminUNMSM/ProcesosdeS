@@ -1,6 +1,5 @@
 package clasesCeviche;
 
-import java.util.Scanner;
 
 /**
  *
